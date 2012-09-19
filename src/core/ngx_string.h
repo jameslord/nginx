@@ -36,7 +36,8 @@ typedef struct {
     u_char     *data;
 } ngx_variable_value_t;
 
-
+// this is not a function in fact, it is kind of macro defination, why choose macro defination? 
+// in fact, sometimes such kind of defination cannot be substitute by functions, right boundary and the char pointer
 #define ngx_string(str)     { sizeof(str) - 1, (u_char *) str }
 #define ngx_null_string     { 0, NULL }
 #define ngx_str_set(str, text)                                               \
